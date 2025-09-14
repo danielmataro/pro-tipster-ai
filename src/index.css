@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Pro Data Design System - Premium Sports AI Landing */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Pro Data Color Palette */
+    --background: 210 15% 7%;
+    --foreground: 210 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 15% 9%;
+    --card-foreground: 210 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 15% 9%;
+    --popover-foreground: 210 15% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary: Deep Professional Blue */
+    --primary: 215 100% 12%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Darker Pro Tone */
+    --secondary: 210 15% 15%;
+    --secondary-foreground: 210 15% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 15% 12%;
+    --muted-foreground: 210 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 15% 15%;
+    --accent-foreground: 210 15% 90%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success Green - For winning/accurate predictions */
+    --success: 140 85% 45%;
+    --success-foreground: 140 100% 95%;
+    --success-subtle: 140 85% 45%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning Amber - For alerts and caution */
+    --warning: 45 100% 60%;
+    --warning-foreground: 45 100% 10%;
+    --warning-subtle: 45 100% 60%;
 
-    --radius: 0.5rem;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 15%;
+    --ring: 140 85% 45%;
+
+    --radius: 0.75rem;
+
+    /* Pro Data Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 100% 8%) 0%, hsl(210 15% 12%) 50%, hsl(215 100% 6%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 15% 9%) 0%, hsl(210 15% 11%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(140 85% 45%) 0%, hsl(140 75% 55%) 100%);
+    --gradient-warning: linear-gradient(135deg, hsl(45 100% 60%) 0%, hsl(40 95% 65%) 100%);
+
+    /* Pro Shadows */
+    --shadow-glow-success: 0 0 40px hsl(140 85% 45% / 0.3);
+    --shadow-glow-warning: 0 0 40px hsl(45 100% 60% / 0.3);
+    --shadow-pro: 0 25px 50px -12px hsl(210 15% 0% / 0.5);
+    --shadow-card: 0 10px 30px -5px hsl(210 15% 0% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +128,87 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Pro Data Component Styles */
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .success-gradient {
+    background: var(--gradient-success);
+  }
+  
+  .warning-gradient {
+    background: var(--gradient-warning);
+  }
+  
+  .pro-shadow {
+    box-shadow: var(--shadow-pro);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .glow-success {
+    box-shadow: var(--shadow-glow-success);
+  }
+  
+  .glow-warning {
+    box-shadow: var(--shadow-glow-warning);
+  }
+  
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+  
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+  
+  .hover-lift {
+    @apply smooth-transition hover:scale-[1.02] hover:-translate-y-1;
+  }
+  
+  .data-number {
+    @apply text-4xl font-black tracking-tight;
+    background: linear-gradient(135deg, hsl(var(--success)) 0%, hsl(var(--warning)) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .floating-whatsapp {
+    @apply fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl hover:shadow-2xl smooth-transition hover:scale-110;
+  }
+  
+  .pro-button-primary {
+    @apply relative px-8 py-4 bg-gradient-to-r from-green-600 to-green-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl smooth-transition hover:scale-105 border border-green-500/20;
+  }
+  
+  .pro-button-secondary {
+    @apply relative px-8 py-4 bg-transparent border-2 border-success text-success font-bold rounded-xl hover:bg-success hover:text-success-foreground smooth-transition;
+  }
+  
+  .stats-card {
+    @apply card-gradient border border-border/50 rounded-2xl p-6 hover-lift card-shadow;
+  }
+  
+  .comparison-row {
+    @apply grid grid-cols-4 gap-4 items-center py-4 border-b border-border/30 hover:bg-accent/10 smooth-transition;
   }
 }
