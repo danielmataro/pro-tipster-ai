@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Target, Brain, TrendingUp, BarChart3 } from "lucide-react";
-import dashboardImage from "@/assets/dashboard-hero.jpg";
+import bettingWinner from "@/assets/betting-winner.jpg";
 
 const Hero = () => {
   return (
@@ -68,10 +68,15 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5" />
               </a>
               
-              <button className="pro-button-secondary inline-flex items-center justify-center gap-2 text-lg">
+              <a
+                href="https://wa.me/34653554023"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pro-button-secondary inline-flex items-center justify-center gap-2 text-lg"
+              >
                 <Play className="w-5 h-5" />
                 Ver cómo funciona
-              </button>
+              </a>
             </div>
           </div>
 
@@ -79,8 +84,8 @@ const Hero = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src={dashboardImage}
-                alt="Dashboard de IA para pronósticos deportivos"
+                src={bettingWinner}
+                alt="Persona ganando apuestas con móvil en mano"
                 className="rounded-2xl shadow-2xl hover-lift border border-border/20"
               />
             </div>

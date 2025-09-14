@@ -14,18 +14,17 @@ const Comparison = () => {
   const competitors = [
     "AI TIPSTER PRO",
     "Grupos de picks/Telegram",
-    "IA genérica", 
-    "Tipster individual"
+    "IA genérica"
   ];
 
   const comparison = [
-    [true, false, false, false],
-    [true, false, false, true],
-    [true, false, false, false],
-    [true, false, false, false],
-    [true, false, false, false],
-    [true, false, false, false],
-    [true, false, false, false]
+    [true, false, false],
+    [true, false, false],
+    [true, false, false],
+    [true, false, false],
+    [true, false, false],
+    [true, false, false],
+    [true, false, false]
   ];
 
   return (
