@@ -14,14 +14,14 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-black leading-tight">
-                Creado por y para{" "}
+                System prompts con{" "}
                 <span className="success-gradient bg-clip-text text-transparent">
-                  tipsters profesionales
+                  algoritmos profesionales
                 </span>
-                . Ahora, a tu alcance.
+                . Estadísticas de las principales ligas.
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground font-medium">
-                Es como tener 1.000 analistas trabajando para ti: IA + datos reales + asesoramiento en tiempo real.
+                www.todoprompt.com - System prompts con algoritmos avanzados y estadísticas completas de LaLiga y principales competiciones.
               </p>
             </div>
 
@@ -64,7 +64,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="pro-button-primary inline-flex items-center justify-center gap-2 text-lg"
               >
-                Quiero mi ventaja ahora
+                Solicitar información por WhatsApp
                 <ArrowRight className="w-5 h-5" />
               </a>
               

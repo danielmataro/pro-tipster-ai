@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Eye, Filter, Clock } from "lucide-react";
+import { Eye, Clock } from "lucide-react";
 
 const LiveBetFeed = () => {
   const bets = [
@@ -73,36 +72,6 @@ const LiveBetFeed = () => {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-4 mb-8 justify-center">
-          <Select defaultValue="all">
-            <SelectTrigger className="w-48">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Todas las ligas</SelectItem>
-              <SelectItem value="premier">Premier League</SelectItem>
-              <SelectItem value="laliga">La Liga</SelectItem>
-              <SelectItem value="bundesliga">Bundesliga</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <Select defaultValue="5">
-            <SelectTrigger className="w-48">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="5">EV mínimo: 5%</SelectItem>
-              <SelectItem value="10">EV mínimo: 10%</SelectItem>
-              <SelectItem value="15">EV mínimo: 15%</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <Button variant="outline" className="gap-2">
-            <Filter className="w-4 h-4" />
-            Más filtros
-          </Button>
-        </div>
 
         {/* Bets Table */}
         <div className="card-gradient rounded-2xl overflow-hidden">

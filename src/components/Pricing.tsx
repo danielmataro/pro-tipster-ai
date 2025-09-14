@@ -65,7 +65,7 @@ const Pricing = () => {
                   className="pro-button-primary w-full inline-flex items-center justify-center gap-2 text-lg"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Adquirir por WhatsApp
+                  Solicitar información por WhatsApp
                 </a>
                 
                 <p className="text-sm text-muted-foreground">

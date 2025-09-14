@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BarChart3, TrendingUp, Target, Clock } from "lucide-react";
+import laligaLogo from "@/assets/laliga-logo.png";
 
 const StatsModule = () => {
   const stats = [
@@ -27,40 +27,19 @@ const StatsModule = () => {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-4 mb-12 justify-center">
-          <Select defaultValue="premier">
-            <SelectTrigger className="w-48">
-              <SelectValue placeholder="Seleccionar Liga" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="premier">Premier League</SelectItem>
-              <SelectItem value="laliga">La Liga</SelectItem>
-              <SelectItem value="bundesliga">Bundesliga</SelectItem>
-              <SelectItem value="seriea">Serie A</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <Select defaultValue="2024">
-            <SelectTrigger className="w-48">
-              <SelectValue placeholder="Temporada" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="2024">2024-25</SelectItem>
-              <SelectItem value="2023">2023-24</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <Select defaultValue="all">
-            <SelectTrigger className="w-48">
-              <SelectValue placeholder="Equipo" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Todos los equipos</SelectItem>
-              <SelectItem value="city">Manchester City</SelectItem>
-              <SelectItem value="arsenal">Arsenal</SelectItem>
-            </SelectContent>
-          </Select>
+        {/* LaLiga Section */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-4 bg-card border border-border/50 rounded-2xl p-6">
+            <img 
+              src={laligaLogo} 
+              alt="LaLiga" 
+              className="w-16 h-16 object-contain"
+            />
+            <div className="text-left">
+              <h3 className="text-xl font-bold">LaLiga EA Sports</h3>
+              <p className="text-muted-foreground">Estadísticas y algoritmos especializados</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
